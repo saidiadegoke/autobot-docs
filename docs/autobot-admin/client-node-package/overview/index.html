@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-autobot-admin/client-node-package/overview" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">overview | Autobot</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://github.com/autobot-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://github.com/autobot-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://github.com/autobot-docs/docs/autobot-admin/client-node-package/overview"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="overview | Autobot"><meta data-rh="true" name="description" content="Structure Overview of clientnode Package"><meta data-rh="true" property="og:description" content="Structure Overview of clientnode Package"><link data-rh="true" rel="icon" href="/autobot-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://github.com/autobot-docs/docs/autobot-admin/client-node-package/overview"><link data-rh="true" rel="alternate" href="https://github.com/autobot-docs/docs/autobot-admin/client-node-package/overview" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/autobot-docs/docs/autobot-admin/client-node-package/overview" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/autobot-docs/blog/rss.xml" title="Autobot RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/autobot-docs/blog/atom.xml" title="Autobot Atom Feed"><link rel="stylesheet" href="/autobot-docs/assets/css/styles.7edd8066.css">
+<script src="/autobot-docs/assets/js/runtime~main.2fbe2ca9.js" defer="defer"></script>
+<script src="/autobot-docs/assets/js/main.e00e7727.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/autobot-docs/"><div class="navbar__logo"><img src="/autobot-docs/img/logo.svg" alt="Autobot Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/autobot-docs/img/logo.svg" alt="Autobot Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Autobot</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/autobot-docs/docs/intro">Documentation</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/autobot-docs/docs/intro">Autobot Documentation</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/autobot-docs/docs/autobot-candidate/overview">The Autobot Candidate</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/autobot-docs/docs/autobot-admin/overview">The Autobot Admin</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/overview">Overview of Autobot Admin</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/setting-up-development-environment">Setting Up the Development Environment</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/app-components">App Components</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/default-controller">default-controller</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/center-package/center-controller">center-controller</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/center-package/center-dtos">center-dtos</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/center-package/center-entity">center-entity</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/center-package/center-repository">center-repository</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/center-package/center-service">center-service</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/center-package/overview">overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/center-package/utilities">utilities</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/autobot-docs/docs/autobot-admin/client-node-package/overview">Client Node Package</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/autobot-docs/docs/autobot-admin/client-node-package/overview">overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/client-node-package/entity">entity</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/client-node-package/client-node-controller">client-node-controller</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/client-node-package/dtos">dtos</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/client-node-package/repository">repository</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/client-node-package/services">services</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/autobot-docs/docs/autobot-admin/client-node-package/utilities">utilities</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/autobot-docs/docs/autobot-admin/exam-package/overview">Exam Package</a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/autobot-docs/docs/autobot-server/overview">The Autobot Server</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/autobot-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">The Autobot Admin</span><meta itemprop="position" content="1"></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Client Node Package</span><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">overview</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>overview</h1></header><h3 class="anchor anchorWithStickyNavbar_LWe7" id="structure-overview-of-clientnode-package">Structure Overview of <code>clientnode</code> Package<a href="#structure-overview-of-clientnode-package" class="hash-link" aria-label="Direct link to structure-overview-of-clientnode-package" title="Direct link to structure-overview-of-clientnode-package">​</a></h3>
+<p>The <code>clientnode</code> package shown in the image represents the functionality within the <strong>AutoBot Admin</strong> application related to managing <strong>client nodes</strong>. Client nodes could be machines connected to the admin system, such as candidate computers, and their interactions with the server are managed through this package. This package includes various components like controllers, services, repositories, and DTOs for communication between client nodes and the admin system.</p>
+<p>Below is a detailed breakdown of each component in the <code>clientnode</code> package:</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-clientnodecontroller">1. <strong>ClientNodeController</strong><a href="#1-clientnodecontroller" class="hash-link" aria-label="Direct link to 1-clientnodecontroller" title="Direct link to 1-clientnodecontroller">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Spring MVC Controller (<code>@RestController</code>)</li>
+<li><strong>Purpose</strong>: Handles incoming HTTP requests related to <strong>client nodes</strong> and their interactions with the server.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Manage client node registration and connection to the server.</li>
+<li>Handle requests related to client node status, health checks, and connection management.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-clientnodeentity">2. <strong>ClientNodeEntity</strong><a href="#2-clientnodeentity" class="hash-link" aria-label="Direct link to 2-clientnodeentity" title="Direct link to 2-clientnodeentity">​</a></h3>
+<ul>
+<li><strong>Type</strong>: JPA Entity (<code>@Entity</code>)</li>
+<li><strong>Purpose</strong>: Represents the client node as a database entity. This is the object that is mapped to a table in the database and holds client node data.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Store client node details such as connection status, IP address, or other relevant metadata.</li>
+<li>Support persistence operations through the repository layer.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-clientnoderepository">3. <strong>ClientNodeRepository</strong><a href="#3-clientnoderepository" class="hash-link" aria-label="Direct link to 3-clientnoderepository" title="Direct link to 3-clientnoderepository">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Spring Data JPA Repository (<code>@Repository</code>)</li>
+<li><strong>Purpose</strong>: Provides an abstraction layer for performing CRUD operations on client node data in the database.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Interact with the <code>ClientNodeEntity</code> to perform database operations such as saving, updating, or retrieving node data.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-clientnodeservice">4. <strong>ClientNodeService</strong><a href="#4-clientnodeservice" class="hash-link" aria-label="Direct link to 4-clientnodeservice" title="Direct link to 4-clientnodeservice">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Service Interface</li>
+<li><strong>Purpose</strong>: Defines the operations that can be performed on client nodes. The service layer handles business logic related to managing client nodes and their interaction with the server.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Define methods to handle the registration, connection, and status management of client nodes.</li>
+<li>Specify business rules for handling nodes, such as health checks or connection verification.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-clientnodeserviceimpl">5. <strong>ClientNodeServiceImpl</strong><a href="#5-clientnodeserviceimpl" class="hash-link" aria-label="Direct link to 5-clientnodeserviceimpl" title="Direct link to 5-clientnodeserviceimpl">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Service Implementation (<code>@Service</code>)</li>
+<li><strong>Purpose</strong>: Provides the concrete implementation of the <code>ClientNodeService</code> interface. This is where the actual business logic for managing client nodes resides.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Implement methods to handle node registration, status checks, health monitoring, and more.</li>
+<li>Call the <code>ClientNodeRepository</code> to perform database operations and return data to the controller.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-connectednodescounterdto">6. <strong>ConnectedNodesCounterDTO</strong><a href="#6-connectednodescounterdto" class="hash-link" aria-label="Direct link to 6-connectednodescounterdto" title="Direct link to 6-connectednodescounterdto">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Data Transfer Object (DTO)</li>
+<li><strong>Purpose</strong>: Represents the count or summary of nodes connected to the server at any given time.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Encapsulate the count of currently connected nodes or other summary metrics that are transferred between the client node service and the admin dashboard.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-connecttoserverrequestdto">7. <strong>ConnectToServerRequestDTO</strong><a href="#7-connecttoserverrequestdto" class="hash-link" aria-label="Direct link to 7-connecttoserverrequestdto" title="Direct link to 7-connecttoserverrequestdto">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Data Transfer Object (DTO)</li>
+<li><strong>Purpose</strong>: Represents the data structure for a request from a client node to connect to the server. This object holds the necessary information for the client node to initiate a connection.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Encapsulate data such as node ID, IP address, or credentials needed to connect a node to the server.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-connecttoserverresponsedto">8. <strong>ConnectToServerResponseDTO</strong><a href="#8-connecttoserverresponsedto" class="hash-link" aria-label="Direct link to 8-connecttoserverresponsedto" title="Direct link to 8-connecttoserverresponsedto">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Data Transfer Object (DTO)</li>
+<li><strong>Purpose</strong>: Represents the response structure for a successful connection request from a client node to the server.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Provide feedback to the client node after attempting to connect to the server, including confirmation of successful connection or failure messages.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9-nodestatusesenum">9. <strong>NodeStatusesEnum</strong><a href="#9-nodestatusesenum" class="hash-link" aria-label="Direct link to 9-nodestatusesenum" title="Direct link to 9-nodestatusesenum">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Enum</li>
+<li><strong>Purpose</strong>: Defines the various statuses a client node can have, such as &quot;Connected&quot;, &quot;Disconnected&quot;, or &quot;In Error&quot;.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Serve as a standard way of representing and managing node statuses across different parts of the application (controller, service, and repository).</li>
+<li>Ensure consistency in how node statuses are checked, updated, and stored.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10-pulsecheckdto">10. <strong>PulseCheckDTO</strong><a href="#10-pulsecheckdto" class="hash-link" aria-label="Direct link to 10-pulsecheckdto" title="Direct link to 10-pulsecheckdto">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Data Transfer Object (DTO)</li>
+<li><strong>Purpose</strong>: Represents the health check or pulse status of a client node. It likely contains information about the health, performance, or connectivity status of a node.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Encapsulate data about the health of the node, such as response times, connectivity status, and overall performance metrics.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-rdpclientdto">11. <strong>RDPClientDTO</strong><a href="#11-rdpclientdto" class="hash-link" aria-label="Direct link to 11-rdpclientdto" title="Direct link to 11-rdpclientdto">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Data Transfer Object (DTO)</li>
+<li><strong>Purpose</strong>: Represents a client node using the Remote Desktop Protocol (RDP). It likely holds configuration or status information specific to RDP clients.</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Encapsulate RDP-specific client node details like IP address, connection status, and protocol configuration.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-thinclientdbresult">12. <strong>ThinClientDBResult</strong><a href="#12-thinclientdbresult" class="hash-link" aria-label="Direct link to 12-thinclientdbresult" title="Direct link to 12-thinclientdbresult">​</a></h3>
+<ul>
+<li><strong>Type</strong>: Data Transfer Object (DTO)</li>
+<li><strong>Purpose</strong>: Represents the result or status of a database query or operation related to a &quot;thin client&quot; (a lightweight client that relies on a server for most processing).</li>
+<li><strong>Key Responsibilities</strong>:<!-- -->
+<ul>
+<li>Encapsulate the results of operations performed on thin clients, such as connection status, database query results, or other client-related information.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-these-components-work-together">How These Components Work Together<a href="#how-these-components-work-together" class="hash-link" aria-label="Direct link to How These Components Work Together" title="Direct link to How These Components Work Together">​</a></h3>
+<ol>
+<li>
+<p><strong>Controller Layer</strong>:</p>
+<ul>
+<li><code>ClientNodeController</code> is responsible for handling HTTP requests related to client nodes, such as registering nodes, checking connection statuses, and performing health checks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Service Layer</strong>:</p>
+<ul>
+<li><code>ClientNodeService</code> and <code>ClientNodeServiceImpl</code> provide the business logic for client nodes. They ensure that the nodes are connected, monitored, and updated as needed. The service layer also interacts with the repository to perform database operations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Repository Layer</strong>:</p>
+<ul>
+<li><code>ClientNodeRepository</code> interacts with the database to perform CRUD operations on the client nodes stored in the database. It abstracts database interactions, allowing the service to focus on business logic.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Transfer Objects (DTOs)</strong>:</p>
+<ul>
+<li>DTOs like <code>ConnectToServerRequestDTO</code>, <code>ConnectToServerResponseDTO</code>, and <code>PulseCheckDTO</code> act as intermediaries that allow data to flow between the server and the client node. These objects decouple the internal database or logic structure from the external API by ensuring a standardized format for data transmission.</li>
+</ul>
+</li>
+<li>
+<p><strong>Enum</strong>:</p>
+<ul>
+<li><code>NodeStatusesEnum</code> provides a consistent set of statuses that are used across the application to represent the state of a client node. This ensures consistency and readability when dealing with client node statuses.</li>
+</ul>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autobot-admin/client-node-package/overview.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/autobot-docs/docs/autobot-admin/center-package/utilities"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">utilities</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/autobot-docs/docs/autobot-admin/client-node-package/entity"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">entity</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#structure-overview-of-clientnode-package" class="table-of-contents__link toc-highlight">Structure Overview of <code>clientnode</code> Package</a></li><li><a href="#1-clientnodecontroller" class="table-of-contents__link toc-highlight">1. <strong>ClientNodeController</strong></a></li><li><a href="#2-clientnodeentity" class="table-of-contents__link toc-highlight">2. <strong>ClientNodeEntity</strong></a></li><li><a href="#3-clientnoderepository" class="table-of-contents__link toc-highlight">3. <strong>ClientNodeRepository</strong></a></li><li><a href="#4-clientnodeservice" class="table-of-contents__link toc-highlight">4. <strong>ClientNodeService</strong></a></li><li><a href="#5-clientnodeserviceimpl" class="table-of-contents__link toc-highlight">5. <strong>ClientNodeServiceImpl</strong></a></li><li><a href="#6-connectednodescounterdto" class="table-of-contents__link toc-highlight">6. <strong>ConnectedNodesCounterDTO</strong></a></li><li><a href="#7-connecttoserverrequestdto" class="table-of-contents__link toc-highlight">7. <strong>ConnectToServerRequestDTO</strong></a></li><li><a href="#8-connecttoserverresponsedto" class="table-of-contents__link toc-highlight">8. <strong>ConnectToServerResponseDTO</strong></a></li><li><a href="#9-nodestatusesenum" class="table-of-contents__link toc-highlight">9. <strong>NodeStatusesEnum</strong></a></li><li><a href="#10-pulsecheckdto" class="table-of-contents__link toc-highlight">10. <strong>PulseCheckDTO</strong></a></li><li><a href="#11-rdpclientdto" class="table-of-contents__link toc-highlight">11. <strong>RDPClientDTO</strong></a></li><li><a href="#12-thinclientdbresult" class="table-of-contents__link toc-highlight">12. <strong>ThinClientDBResult</strong></a></li><li><a href="#how-these-components-work-together" class="table-of-contents__link toc-highlight">How These Components Work Together</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/autobot-docs/docs/intro">Documentation</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/autobot-docs/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 Autobot by Morgen Green - Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

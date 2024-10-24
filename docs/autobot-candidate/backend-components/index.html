@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-autobot-candidate/backend-components" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">Autobot Condidate Backend Components | Autobot</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://github.com/autobot-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://github.com/autobot-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://github.com/autobot-docs/docs/autobot-candidate/backend-components"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Autobot Condidate Backend Components | Autobot"><meta data-rh="true" name="description" content="This documentation provides an overview of the backend components of the Autobot Candidate Application, categorizing them into their respective packages. The application is built using Java and follows a structured approach, which enhances maintainability and scalability."><meta data-rh="true" property="og:description" content="This documentation provides an overview of the backend components of the Autobot Candidate Application, categorizing them into their respective packages. The application is built using Java and follows a structured approach, which enhances maintainability and scalability."><link data-rh="true" rel="icon" href="/autobot-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://github.com/autobot-docs/docs/autobot-candidate/backend-components"><link data-rh="true" rel="alternate" href="https://github.com/autobot-docs/docs/autobot-candidate/backend-components" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/autobot-docs/docs/autobot-candidate/backend-components" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/autobot-docs/blog/rss.xml" title="Autobot RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/autobot-docs/blog/atom.xml" title="Autobot Atom Feed"><link rel="stylesheet" href="/autobot-docs/assets/css/styles.7edd8066.css">
+<script src="/autobot-docs/assets/js/runtime~main.2fbe2ca9.js" defer="defer"></script>
+<script src="/autobot-docs/assets/js/main.e00e7727.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/autobot-docs/"><div class="navbar__logo"><img src="/autobot-docs/img/logo.svg" alt="Autobot Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/autobot-docs/img/logo.svg" alt="Autobot Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Autobot</b></a><a class="navbar__item navbar__link" href="/autobot-docs/docs/intro">Documentation</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Autobot Condidate Backend Components</h1></header>
+<p>This documentation provides an overview of the backend components of the Autobot Candidate Application, categorizing them into their respective packages. The application is built using Java and follows a structured approach, which enhances maintainability and scalability.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="project-structure-overview">Project Structure Overview<a href="#project-structure-overview" class="hash-link" aria-label="Direct link to Project Structure Overview" title="Direct link to Project Structure Overview">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-controllers">1. <strong>Controllers</strong><a href="#1-controllers" class="hash-link" aria-label="Direct link to 1-controllers" title="Direct link to 1-controllers">​</a></h3>
+<p>The <code>controllers</code> package contains classes responsible for handling incoming requests and returning appropriate responses.</p>
+<ul>
+<li>
+<p><strong>ExamControllerSocket.java</strong></p>
+<ul>
+<li>Manages WebSocket connections for exam-related functionalities.</li>
+</ul>
+</li>
+<li>
+<p><strong>NodeController.java</strong></p>
+<ul>
+<li>Handles HTTP requests related to node operations.</li>
+</ul>
+</li>
+<li>
+<p><strong>NodeControllerRDP.java</strong></p>
+<ul>
+<li>Manages Remote Desktop Protocol (RDP) related functionalities.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-dialect">2. <strong>Dialect</strong><a href="#2-dialect" class="hash-link" aria-label="Direct link to 2-dialect" title="Direct link to 2-dialect">​</a></h3>
+<p>The <code>dialect</code> package includes custom SQL dialect implementations.</p>
+<ul>
+<li>
+<p><strong>SQLDialect.java</strong></p>
+<ul>
+<li>Provides specific SQL dialect functionality for the application.</li>
+</ul>
+</li>
+<li>
+<p><strong>SQLiteIdentityColumnSupport.java</strong></p>
+<ul>
+<li>Supports identity column generation for SQLite databases.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-data-transfer-objects-dto">3. <strong>Data Transfer Objects (DTO)</strong><a href="#3-data-transfer-objects-dto" class="hash-link" aria-label="Direct link to 3-data-transfer-objects-dto" title="Direct link to 3-data-transfer-objects-dto">​</a></h3>
+<p>The <code>dto</code> package includes classes used for transferring data between client and server.</p>
+<ul>
+<li><strong>ClientNodeTypeDto.java</strong></li>
+<li><strong>ConnectRequestDTO.java</strong></li>
+<li><strong>ConnectToAdminResponseDTO.java</strong></li>
+<li><strong>ExamSessionEndNotificationDTO.java</strong></li>
+<li><strong>ExamSessionStartNotificationDTO.java</strong></li>
+<li><strong>JoinExamRequestDTO.java</strong></li>
+<li><strong>NodeSystemPropertyDTO.java</strong></li>
+<li><strong>PulseCheckDTO.java</strong></li>
+<li><strong>RDClientDTO.java</strong></li>
+<li><strong>ResponseMessage.java</strong></li>
+<li><strong>SubmitAcknowledgmentMessage.java</strong></li>
+<li><strong>SubmitAnswerRequestDTO.java</strong></li>
+<li><strong>SubmitAnswerResponseDTO.java</strong></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-enums">4. <strong>Enums</strong><a href="#4-enums" class="hash-link" aria-label="Direct link to 4-enums" title="Direct link to 4-enums">​</a></h3>
+<p>The <code>enums</code> package contains enumerations for various constants used throughout the application.</p>
+<ul>
+<li><strong>ErrorMessagesEnum.java</strong></li>
+<li><strong>RequestStatusesEnum.java</strong></li>
+<li><strong>ResponseCodes.java</strong></li>
+<li><strong>SocketMessagePayloadTypesEnum.java</strong></li>
+<li><strong>SubjectsEnum.java</strong></li>
+<li><strong>SubmitInstructionsEnum.java</strong></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-exceptions">5. <strong>Exceptions</strong><a href="#5-exceptions" class="hash-link" aria-label="Direct link to 5-exceptions" title="Direct link to 5-exceptions">​</a></h3>
+<p>The <code>exceptions</code> package holds custom exceptions used for handling specific error scenarios.</p>
+<ul>
+<li><strong>InvalidInputException.java</strong>
+<ul>
+<li>Thrown when invalid input is detected.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-http">6. <strong>HTTP</strong><a href="#6-http" class="hash-link" aria-label="Direct link to 6-http" title="Direct link to 6-http">​</a></h3>
+<p>The <code>http</code> package manages HTTP communication.</p>
+<ul>
+<li>
+<p><strong>AutobotClient.java</strong></p>
+<ul>
+<li>A client for making HTTP calls to the admin server.</li>
+</ul>
+</li>
+<li>
+<p><strong>CustomFeignClient.java</strong></p>
+<ul>
+<li>A custom Feign client for simplified HTTP requests.</li>
+</ul>
+</li>
+<li>
+<p><strong>FeignConfig.java</strong></p>
+<ul>
+<li>Configuration settings for Feign clients.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-services">7. <strong>Services</strong><a href="#7-services" class="hash-link" aria-label="Direct link to 7-services" title="Direct link to 7-services">​</a></h3>
+<p>The <code>services</code> package contains service interfaces and implementations that encapsulate business logic.</p>
+<ul>
+<li>
+<p><strong>ConnectService.java</strong></p>
+<ul>
+<li>Interface for connecting client nodes to the admin server.</li>
+</ul>
+</li>
+<li>
+<p><strong>ConnectServiceImpl.java</strong></p>
+<ul>
+<li>Implementation of the <code>ConnectService</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>ConnectServiceRDPImpl.java</strong></p>
+<ul>
+<li>Implementation for handling RDP connections.</li>
+</ul>
+</li>
+<li>
+<p><strong>ExamService.java</strong></p>
+<ul>
+<li>Interface for managing exam-related functionalities.</li>
+</ul>
+</li>
+<li>
+<p><strong>ExamServiceImpl.java</strong></p>
+<ul>
+<li>Implementation of the <code>ExamService</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>ExamServiceRDPImpl.java</strong></p>
+<ul>
+<li>RDP-specific implementation of the <code>ExamService</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-socket">8. <strong>Socket</strong><a href="#8-socket" class="hash-link" aria-label="Direct link to 8-socket" title="Direct link to 8-socket">​</a></h3>
+<p>The <code>socket</code> package handles WebSocket communication.</p>
+<ul>
+<li>
+<p><strong>AutobotStompSessionHandler.java</strong></p>
+<ul>
+<li>Manages STOMP sessions for WebSocket communication.</li>
+</ul>
+</li>
+<li>
+<p><strong>AutobotStompSessionHandlerRDP.java</strong></p>
+<ul>
+<li>RDP-specific STOMP session handler.</li>
+</ul>
+</li>
+<li>
+<p><strong>CustomSocketMessage.java</strong></p>
+<ul>
+<li>Represents messages sent over WebSocket connections.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9-storage">9. <strong>Storage</strong><a href="#9-storage" class="hash-link" aria-label="Direct link to 9-storage" title="Direct link to 9-storage">​</a></h3>
+<p>The <code>storage</code> package contains classes related to data persistence.</p>
+<ul>
+<li>
+<p><strong>ClientNodeEntity.java</strong></p>
+<ul>
+<li>Entity representing client node data.</li>
+</ul>
+</li>
+<li>
+<p><strong>ClientNodeRepository.java</strong></p>
+<ul>
+<li>Repository interface for client node data access.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10-utility-classes">10. <strong>Utility Classes</strong><a href="#10-utility-classes" class="hash-link" aria-label="Direct link to 10-utility-classes" title="Direct link to 10-utility-classes">​</a></h3>
+<p>The <code>util</code> package includes various utility classes for common functionalities.</p>
+<ul>
+<li>
+<p><strong>APIUtil.java</strong></p>
+<ul>
+<li>Utility class for handling API-related tasks.</li>
+</ul>
+</li>
+<li>
+<p><strong>IPAddress.java</strong></p>
+<ul>
+<li>Utility for managing IP address operations.</li>
+</ul>
+</li>
+<li>
+<p><strong>SigarUtil.java</strong></p>
+<ul>
+<li>Utility class for system monitoring and metrics.</li>
+</ul>
+</li>
+<li>
+<p><strong>SystemInfoUtil.java</strong></p>
+<ul>
+<li>Gathers and manages system information.</li>
+</ul>
+</li>
+<li>
+<p><strong>AutobotClientnodeApplication.java</strong></p>
+<ul>
+<li>Main application entry point for the Autobot Client Node.</li>
+</ul>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autobot-candidate/backend-components.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#project-structure-overview" class="table-of-contents__link toc-highlight">Project Structure Overview</a><ul><li><a href="#1-controllers" class="table-of-contents__link toc-highlight">1. <strong>Controllers</strong></a></li><li><a href="#2-dialect" class="table-of-contents__link toc-highlight">2. <strong>Dialect</strong></a></li><li><a href="#3-data-transfer-objects-dto" class="table-of-contents__link toc-highlight">3. <strong>Data Transfer Objects (DTO)</strong></a></li><li><a href="#4-enums" class="table-of-contents__link toc-highlight">4. <strong>Enums</strong></a></li><li><a href="#5-exceptions" class="table-of-contents__link toc-highlight">5. <strong>Exceptions</strong></a></li><li><a href="#6-http" class="table-of-contents__link toc-highlight">6. <strong>HTTP</strong></a></li><li><a href="#7-services" class="table-of-contents__link toc-highlight">7. <strong>Services</strong></a></li><li><a href="#8-socket" class="table-of-contents__link toc-highlight">8. <strong>Socket</strong></a></li><li><a href="#9-storage" class="table-of-contents__link toc-highlight">9. <strong>Storage</strong></a></li><li><a href="#10-utility-classes" class="table-of-contents__link toc-highlight">10. <strong>Utility Classes</strong></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/autobot-docs/docs/intro">Documentation</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/autobot-docs/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 Autobot by Morgen Green - Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
