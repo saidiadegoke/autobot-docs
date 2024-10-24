@@ -28,6 +28,18 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
    
 }; */
 
+/**
+ * Creating a sidebar enables you to:
+ * - create an ordered group of docs
+ * - render a sidebar for each doc of that group
+ * - provide next/previous navigation
+ *
+ * The sidebars can be generated from the filesystem or explicitly defined here.
+ *
+ * Create as many sidebars as you want.
+ */
+
+// Sidebar configuration
 module.exports = {
   tutorialSidebar: [
     'intro',
@@ -37,38 +49,14 @@ module.exports = {
       items: [
         'autobot-candidate/overview',
         'autobot-candidate/system-requirements',
-        {
-          type: 'category',
-          label: 'Test Taker Documentation',
-          items: [
-            'autobot-candidate/test-taker-documentation/reading-instructions',
-            'autobot-candidate/test-taker-documentation/starting-exam',
-            'autobot-candidate/test-taker-documentation/taking-exam',
-            'autobot-candidate/test-taker-documentation/submitting-exam',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Exam Center Documentation',
-          items: [
-            'autobot-candidate/exam-center-documentation/installation',
-            'autobot-candidate/exam-center-documentation/connecting-to-admin',
-            'autobot-candidate/exam-center-documentation/verifying-connection',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Developer Documentation',
-          items: [
-            'autobot-candidate/developer-documentation/overview',
-            'autobot-candidate/developer-documentation/installing-dependencies',
-            'autobot-candidate/developer-documentation/setting-up-development-environment',
-            'autobot-candidate/developer-documentation/cloning-repos',
-            'autobot-candidate/developer-documentation/running-app',
-            'autobot-candidate/developer-documentation/building-for-distribution',
-            'autobot-candidate/developer-documentation/app-components',
-          ],
-        },
+        'autobot-candidate/setting-up-development-environment',
+        'autobot-candidate/cloning-repos',
+        'autobot-candidate/installing-dependencies',
+        'autobot-candidate/running-app',
+        //'autobot-candidate/connecting-to-admin',
+        //'autobot-candidate/verifying-connection',
+        'autobot-candidate/app-components',
+        'autobot-candidate/building-for-distribution',
       ],
     },
     {
@@ -76,30 +64,42 @@ module.exports = {
       label: 'The Autobot Admin',
       items: [
         'autobot-admin/overview',
-        'autobot-admin/system-requirements',
+        //'autobot-admin/overview',
+        'autobot-admin/setting-up-development-environment',
+        'autobot-admin/app-components',
+        'autobot-admin/default-controller',
+        'autobot-admin/center-package/center-controller',
+        'autobot-admin/center-package/center-dtos',
+        'autobot-admin/center-package/center-entity',
+        'autobot-admin/center-package/center-repository',
+        'autobot-admin/center-package/center-service',
+        'autobot-admin/center-package/overview',
+        'autobot-admin/center-package/utilities',
         {
           type: 'category',
-          label: 'Exam Center Documentation',
+          label: 'Client Node Package',
           items: [
-            'autobot-admin/exam-center-documentation/installation',
-            'autobot-admin/exam-center-documentation/register-center',
-            'autobot-admin/exam-center-documentation/create-exam',
-            'autobot-admin/exam-center-documentation/connect-candidate-systems',
-            'autobot-admin/exam-center-documentation/start-exam',
-            'autobot-admin/exam-center-documentation/monitor-exam',
-            'autobot-admin/exam-center-documentation/upload-reports',
+            'autobot-admin/client-node-package/overview',
+            'autobot-admin/client-node-package/entity',
+            'autobot-admin/client-node-package/client-node-controller',
+            'autobot-admin/client-node-package/dtos',
+            'autobot-admin/client-node-package/repository',
+            'autobot-admin/client-node-package/services',
+            'autobot-admin/client-node-package/utilities',
           ],
         },
         {
           type: 'category',
-          label: 'Developer Documentation',
+          label: 'Exam Package',
           items: [
-            'autobot-admin/developer-documentation/installing-dependencies',
-            'autobot-admin/developer-documentation/setting-up-development-environment',
-            'autobot-admin/developer-documentation/cloning-repos',
-            'autobot-admin/developer-documentation/running-app',
-            'autobot-admin/developer-documentation/building-for-distribution',
-            'autobot-admin/developer-documentation/app-components',
+            'autobot-admin/exam-package/overview',
+            'autobot-admin/exam-package/dtos',
+            'autobot-admin/exam-package/exam-controller',
+            'autobot-admin/exam-package/exam-memory-impl',
+            'autobot-admin/exam-package/exam-service',
+            'autobot-admin/exam-package/other-controllers',
+            'autobot-admin/exam-package/repositories',
+            'autobot-admin/exam-package/utilities',
           ],
         },
       ],
@@ -110,46 +110,14 @@ module.exports = {
       items: [
         'autobot-server/overview',
         'autobot-server/system-requirements',
-        {
-          type: 'category',
-          label: 'Administration',
-          items: [
-            'autobot-server/administration/dashboard-overview',
-            'autobot-server/administration/uploaded-proposed-centers',
-            'autobot-server/administration/registered-vs-non-registered',
-            'autobot-server/administration/autotested-vs-not-autotested',
-            'autobot-server/administration/centres-list',
-            'autobot-server/administration/standalone-centres',
-            'autobot-server/administration/zero-client-centres',
-            'autobot-server/administration/mixed-centres',
-            'autobot-server/administration/computer-specifications',
-            'autobot-server/administration/centre-performance',
-            {
-              type: 'category',
-              label: 'Exams Reporting',
-              items: [
-                'autobot-server/administration/exams-reporting/total-number-of-reports',
-                'autobot-server/administration/exams-reporting/computer-reports-summary',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Developer Documentation',
-          items: [
-            'autobot-server/developer-documentation/installing-dependencies',
-            'autobot-server/developer-documentation/setting-up-development-environment',
-            'autobot-server/developer-documentation/cloning-repos',
-            'autobot-server/developer-documentation/running-app',
-            'autobot-server/developer-documentation/deploying-to-lambda',
-            'autobot-server/developer-documentation/app-components',
-          ],
-        },
+        'autobot-server/setting-up-development-environment',
+        'autobot-server/cloning-repos',
+        'autobot-server/installing-dependencies',
+        'autobot-server/environmental-variables',
+        'autobot-server/running-app',
+        'autobot-server/deploying-to-lambda',
+        'autobot-server/app-components',
       ],
     },
   ],
 };
-
-
-// export default sidebars;

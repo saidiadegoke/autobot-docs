@@ -32,8 +32,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} Documentation`}
+      description="Autobot is an advanced testing application that automates the evaluation of client computers used for JAMB exams. The app ensures that all connected systems meet performance and compatibility requirements for the exams.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
