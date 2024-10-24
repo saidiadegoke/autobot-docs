@@ -1,6 +1,4 @@
-# Overview of Autobot Admin
-
-### Overview of the Two Projects
+# Overview
 
 The **AutoBot Admin** system is composed of two distinct but interconnected projects:
 
@@ -38,20 +36,5 @@ This design can be classified as a **monolithic architecture**, where both the f
 2. **Single Deployment**: Since the frontend is packaged with the backend, it ensures compatibility between the two. The application can be deployed to a single server or environment.
 3. **Easier for Small Teams**: With everything in one place, managing the application is easier for smaller teams. There's less overhead in terms of maintaining multiple repositories or services.
 4. **Shared Codebase**: Shared dependencies and libraries can be managed more easily within a single project, avoiding versioning conflicts.
-
-#### Disadvantages of the Monolithic Design:
-1. **Limited Scalability**: Scaling a monolithic application is more challenging. As the application grows, performance issues may arise since both the frontend and backend are tightly coupled.
-   - **Solution**: A more complex architecture (like microservices) could allow for independent scaling of components.
-2. **Harder to Update/Deploy**: Even small changes to either the frontend or backend require a full redeployment of the entire application. This can slow down the development process and make updates riskier.
-   - **Solution**: A microservices architecture could allow smaller, incremental updates.
-3. **Tight Coupling**: Changes in one part of the system (frontend or backend) may have unintended consequences on the other, making development and testing more complex.
-   - **Solution**: Separation of concerns with well-defined APIs in a distributed system would mitigate these issues.
-4. **Slower Development**: As the codebase grows, it becomes harder to manage. This can result in slower development and longer testing cycles as the system becomes more intertwined.
-   - **Solution**: Adopting a service-oriented or microservices-based architecture can help decouple the components for more rapid development.
-
-### Alternative Architectural Patterns: **Microservices Architecture**
-
-Instead of bundling the frontend and backend into a single deployable unit, a **microservices** or **distributed architecture** would separate the frontend from the backend into independent services. This is more complex but offers several advantages.
-
 
 The **AutoBot Admin** system uses a **monolithic architecture**, where the frontend and backend are bundled and deployed together. This architecture works well for smaller applications, providing simplicity and ease of deployment.

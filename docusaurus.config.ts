@@ -8,14 +8,14 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.krent.com',
+  url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/autobot-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Morgen Green', // Usually your GitHub org/user name.
+  organizationName: 'saidiadegoke', // Usually your GitHub org/user name.
   projectName: 'autobot-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
